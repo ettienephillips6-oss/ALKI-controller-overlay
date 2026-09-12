@@ -1,289 +1,30 @@
-/* =========================================
-   ALKI CUSTOM GAMEPAD VIEWER SKIN
-   ========================================= */
-
-
-/* ---------- PAGE ---------- */
-
 html,
-body {
-  margin: 0 !important;
-  padding: 0 !important;
-
-  width: 100% !important;
-  height: 100% !important;
-
+body,
+.main-content {
   background: transparent !important;
-
-  overflow: hidden !important;
 }
-
-
-/* ---------- GAMEPAD CONTAINER ---------- */
 
 #gamepads {
+  display: block !important;
   position: relative !important;
-
-  width: 900px !important;
-  height: 600px !important;
-
-  margin: 0 auto !important;
 }
-
-
-/* ---------- MAIN CONTROLLER ---------- */
 
 .controller.xbox {
+  display: block !important;
   position: relative !important;
 
   width: 900px !important;
   height: 600px !important;
 
-background-image: url("https://ettienephillips6-oss.github.io/ALKI-controller-overlay/controller-base.png") !important;
+  background-image: url("https://ettienephillips6-oss.github.io/ALKI-controller-overlay/controller-base.png") !important;
   background-size: contain !important;
-  background-position: center !important;
+  background-position: center center !important;
   background-repeat: no-repeat !important;
-}
-
-
-/* ---------- HIDE GPV DEFAULT ARTWORK ---------- */
-
-.controller.xbox .triggers,
-.controller.xbox .bumpers,
-.controller.xbox .touchpad,
-.controller.xbox .quadrant,
-.controller.xbox .meta,
-.controller.xbox .arrows,
-.controller.xbox .wheels,
-.controller.xbox .fstick {
-  opacity: 0 !important;
-}
-
-
-/* Keep these functional */
-
-.controller.xbox .abxy,
-.controller.xbox .sticks,
-.controller.xbox .dpad {
-  opacity: 1 !important;
-}
-
-
-/* =========================================
-   A B X Y
-   ========================================= */
-
-.controller.xbox .abxy {
-  position: absolute !important;
-
-  top: 0 !important;
-  left: 0 !important;
-
-  width: 100% !important;
-  height: 100% !important;
-}
-
-
-/* Base face button */
-
-.controller.xbox .button {
-  position: absolute !important;
-
-  width: 52px !important;
-  height: 52px !important;
-
-  margin: 0 !important;
-
-  border-radius: 50% !important;
-
-  background-image: none !important;
-  background-color: rgba(155, 60, 255, 0.08) !important;
-
-  border: 2px solid rgba(185, 90, 255, 0.25) !important;
-
-  box-shadow:
-    0 0 6px rgba(170, 70, 255, 0.25),
-    inset 0 0 8px rgba(170, 70, 255, 0.15) !important;
-
-  transition:
-    filter 50ms ease,
-    box-shadow 50ms ease,
-    background-color 50ms ease !important;
-}
-
-
-/* ---------- Y ---------- */
-
-.controller.xbox .button.y {
-  left: 71% !important;
-  top: 19.5% !important;
-}
-
-
-/* ---------- X ---------- */
-
-.controller.xbox .button.x {
-  left: 64.5% !important;
-  top: 27.8% !important;
-}
-
-
-/* ---------- B ---------- */
-
-.controller.xbox .button.b {
-  left: 76.6% !important;
-  top: 27.8% !important;
-}
-
-
-/* ---------- A ---------- */
-
-.controller.xbox .button.a {
-  left: 71% !important;
-  top: 36.5% !important;
-}
-
-
-/* ---------- FACE BUTTON PRESSED ---------- */
-
-.controller.xbox .button.pressed,
-.controller.xbox .button.active {
-  background-color: rgba(185, 75, 255, 0.6) !important;
-
-  border-color: rgba(220, 150, 255, 1) !important;
-
-  box-shadow:
-    0 0 8px #d58cff,
-    0 0 16px #b84dff,
-    0 0 28px rgba(140, 40, 255, 0.9),
-    inset 0 0 12px rgba(255, 255, 255, 0.45) !important;
-
-  filter: brightness(1.5) !important;
-}
-
-
-/* =========================================
-   ANALOG STICKS
-   ========================================= */
-
-.controller.xbox .sticks {
-  position: absolute !important;
-
-  top: 0 !important;
-  left: 0 !important;
-
-  width: 100% !important;
-  height: 100% !important;
-}
-
-
-/* Stick appearance */
-
-.controller.xbox .stick {
-  position: absolute !important;
-
-  width: 78px !important;
-  height: 78px !important;
-
-  border-radius: 50% !important;
-
-  background-image: none !important;
-  background-color: rgba(20, 10, 25, 0.15) !important;
-
-  border: 3px solid rgba(175, 70, 255, 0.75) !important;
-
-  box-shadow:
-    0 0 8px rgba(180, 70, 255, 0.65),
-    0 0 18px rgba(145, 40, 255, 0.4),
-    inset 0 0 10px rgba(185, 80, 255, 0.3) !important;
-}
-
-
-/* ---------- LEFT STICK ---------- */
-
-.controller.xbox .stick.left {
-  left: 22.5% !important;
-  top: 25% !important;
-}
-
-
-/* ---------- RIGHT STICK ---------- */
-
-.controller.xbox .stick.right {
-  left: 58.5% !important;
-  top: 45% !important;
-}
-
-
-/* =========================================
-   DPAD
-   ========================================= */
-
-.controller.xbox .dpad {
-  position: absolute !important;
-
-  left: 32% !important;
-  top: 47% !important;
-
-  width: 135px !important;
-  height: 135px !important;
-
-  background-image: none !important;
 
   opacity: 1 !important;
 }
 
-
-/* D-pad directions */
-
-.controller.xbox .dpad span {
-  position: absolute !important;
-
-  background-color: rgba(170, 65, 255, 0.08) !important;
-
-  transition:
-    background-color 50ms ease,
-    box-shadow 50ms ease !important;
-}
-
-
-/* Pressed D-pad */
-
-.controller.xbox .dpad span.pressed,
-.controller.xbox .dpad span.active {
-  background-color: rgba(185, 75, 255, 0.55) !important;
-
-  box-shadow:
-    0 0 8px #cf82ff,
-    0 0 18px #9d4edd,
-    0 0 28px rgba(125, 40, 220, 0.8) !important;
-}
-
-
-/* =========================================
-   DISCONNECTED CONTROLLERS
-   ========================================= */
-
+/* Hide disconnected controllers only */
 .controller.xbox.disconnected {
-  display: none !important;
-}
-
-
-/* Only show active controller */
-
-.controller.xbox:not(.active) {
-  display: none !important;
-}
-
-
-/* =========================================
-   REMOVE UNWANTED GPV UI
-   ========================================= */
-
-.navbar,
-#menu,
-#modals,
-#banners,
-.template {
   display: none !important;
 }
