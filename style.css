@@ -1,16 +1,26 @@
 html,
 body,
 .main-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+
   background: transparent !important;
+  overflow: hidden !important;
 }
 
 #gamepads {
-  display: block !important;
   position: relative !important;
+
+  width: 900px !important;
+  height: 600px !important;
+
+  margin: 0 auto !important;
 }
 
-.controller.xbox {
-  display: block !important;
+/* MAIN CONTROLLER */
+.controller {
   position: relative !important;
 
   width: 900px !important;
@@ -22,9 +32,27 @@ body,
   background-repeat: no-repeat !important;
 
   opacity: 1 !important;
+  display: block !important;
 }
 
-/* Hide disconnected controllers only */
-.controller.xbox.disconnected {
+/* Hide other player slots */
+#gamepad-1,
+#gamepad-2,
+#gamepad-3 {
+  display: none !important;
+}
+
+/* Keep player 1 visible */
+#gamepad-0 {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Remove Gamepad Viewer UI */
+.navbar,
+#menu,
+#modals,
+#banners,
+.template {
   display: none !important;
 }
